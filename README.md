@@ -10,7 +10,7 @@ abstraire criar representações do mundo real para o código.
 ```
 public class MinhaClasse {
 
-//SEU CÓDIGO AQUI
+  //SEU CÓDIGO AQUI
 
 }
 ```
@@ -20,15 +20,15 @@ public class MinhaClasse {
 
 ```
 public class MinhaClasse {
-// CORPO DA CLASSE
+  // CORPO DA CLASSE
 
-public static void main(String[] args) {
-// CORPO DO MÉTODO MAIN
-}
+  public static void main(String[] args) {
+    // CORPO DO MÉTODO MAIN
+  }
 
 }
 ```
-
+**B**
 * É de suma importância, que agora você consiga se localizar,dentro do conjunto de chaves { } existentes em sua classe.
 * Dentro de uma aplicação, **recomenda-se que somente uma classe possua o método** `main`, responsável por iniciar todo 
 o nosso programa.
