@@ -8,18 +8,18 @@ Um dos principais recursos que utilizamos no paradigma de orientação a objetos
 abstraire criar representações do mundo real para o código.
 
 ```java
-public class MinhaClasse {
+public class anatomiadasclasses.MinhaClasse {
 
   //SEU CÓDIGO AQUI
 
 }
 ```
 * 99,9% das nossas classes iniciarão com public class.
-* Toda classe precisa de nome, exemplo MinhaClasse.
+* Toda classe precisa de nome, exemplo anatomiadasclasses.MinhaClasse.
 * Após o nome, precisamos definir o corpo { } onde iremos compor nossas classes com atributos e métodos.
 
 ```java
-public class MinhaClasse {
+public class anatomiadasclasses.MinhaClasse {
   // CORPO DA CLASSE
 
   public static void main(String[] args) {
@@ -245,7 +245,7 @@ parâmetros e implementação (código). A declaração não inclui o código re
 Exemplo de declaração de método em Java:
 
 ```java
-public class MinhaClasse {
+public class anatomiadasclasses.MinhaClasse {
 
   public static void main(String[] args) {
       
@@ -348,6 +348,98 @@ public class BoletimEstudantil {
     }
 }
 ```
+
+<br>
+
+### Aula 05
+
+#### Organização de pacotes
+
+A organização de pacotes em Java é uma prática que envolve agrupar classes relacionadas em estruturas de diretórios
+hierárquicas. Isso ajuda a manter o código-fonte organizado, facilitando a localização, manutenção e colaboração em
+projetos mais complexos. A organização de pacotes também evita conflitos de nomes de classes e ajuda a modularizar o
+código.
+
+Aqui estão algumas diretrizes para organizar pacotes em seus projetos Java:
+
+1. **Nomeação de Pacotes**: Os nomes dos pacotes são normalmente escritos em letras minúsculas. Se o nome do pacote
+consistir em várias palavras, você pode usar o padrão CamelCase ou separar as palavras por pontos.
+
+2. **Hierarquia de Pacotes**: Use uma hierarquia de pacotes para refletir a estrutura do seu projeto. Por exemplo, você
+pode começar com o nome da sua organização ou domínio (revertido) e depois adicionar subpacotes para categorizar
+diferentes partes do seu projeto.
+
+3. **Nome de Classes**: Evite usar classes com nomes genéricos em pacotes de alto nível, pois isso pode levar a
+conflitos. Use nomes descritivos que reflitam a finalidade da classe.
+
+4. **Dependências Claras**: Organize pacotes de modo que suas dependências fiquem claras. Pacotes mais baixos podem
+depender de pacotes mais altos, mas a estrutura deve ser lógica e evitar ciclos de dependência.
+
+5. **Padrões de Projeto**: À medida que seu projeto cresce, considere usar padrões de projeto para dividir a lógica do
+programa em camadas (MVC, camadas de serviço, etc.) e organizar melhor suas classes.
+
+6. **Diretório de Origem**: Mantenha a estrutura de diretórios de acordo com a hierarquia de pacotes. Por exemplo, a
+classe `com.empresa.projeto.anatomiadasclasses.MinhaClasse` deve estar localizada em `src/com/empresa/projeto/anatomiadasclasses.MinhaClasse.java`.
+
+7. **Importações de Pacotes**: Use declarações `import` para importar classes de pacotes diferentes. Isso permite que
+você use classes de outros pacotes em seu código.
+
+8. **Documentação**: Forneça documentação (Javadoc) em seus pacotes e classes para facilitar o entendimento do código
+por outros desenvolvedores.
+
+Lembre-se de que não há uma única maneira correta de organizar pacotes; a abordagem exata dependerá do tamanho e da
+complexidade do seu projeto. O objetivo é tornar seu código mais compreensível e gerenciável, facilitando o
+desenvolvimento e a colaboração.
+
+Exemplo:
+
+Claro! Aqui está um exemplo simples de como você pode organizar pacotes em um projeto Java. Vamos supor que você esteja
+desenvolvendo um aplicativo de gerenciamento de biblioteca.
+
+Estrutura de Diretórios e Pacotes:
+```
+src/
+└── com/
+    └── biblioteca/
+        ├── model/
+        │   ├── Livro.java
+        │   └── Autor.java
+        ├── view/
+        │   ├── TelaPrincipal.java
+        │   └── TelaDetalhesLivro.java
+        └── Main.java
+```
+
+Nesse exemplo, você criou um pacote principal chamado `com.biblioteca` para conter todas as classes relacionadas ao
+aplicativo da biblioteca.
+
+- O pacote `model` contém as classes que representam os objetos de dados do aplicativo, como `Livro` e `Autor`.
+- O pacote `view` contém classes que representam a interface do usuário, como `TelaPrincipal` e `TelaDetalhesLivro`.
+- O arquivo `Main.java` está no pacote principal `com.biblioteca` e é onde você pode começar a execução do aplicativo.
+
+Agora, vamos dar uma olhada em um trecho de código em uma das classes para ver como as importações de pacotes e classes
+funcionariam:
+
+**Exemplo de Uso de Pacotes e Importações:**
+```java
+package com.biblioteca.view;
+
+import com.biblioteca.model.Livro;
+
+public class TelaDetalhesLivro {
+
+    public void exibirDetalhes(Livro livro) {
+        // Código para exibir detalhes do livro
+    }
+}
+```
+
+Nesse exemplo, a classe `TelaDetalhesLivro` está no pacote `com.biblioteca.view`, e ela importa a classe `Livro` do
+pacote `com.biblioteca.model` para poder usá-la.
+
+Essa estrutura de organização ajuda a manter o código bem separado, facilitando a localização e a manutenção de classes
+relacionadas. Ela também evita conflitos de nomes de classes e permite que você organize seu código de maneira lógica e
+escalável.
 
 <br>
 
