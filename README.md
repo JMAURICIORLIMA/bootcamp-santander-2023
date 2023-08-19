@@ -301,3 +301,53 @@ primeiro usando `System.out.println` e depois usando `System.out.printf`.
 Portanto, o resultado final será a impressão das mensagens conforme indicado acima.
 
 > Inclusão de dados retirados do CHATGPT.
+
+<br>
+
+### Aula 04
+#### Indentação
+<br>
+Basicamente indentar é um termo utilizado para escrever o código do programa de forma hierárquica, facilitando assim a
+visualização e o entendimento do programa.
+
+![](https://sintaxe.netlify.app/assets/sintaxe-1.9903b952.png)
+
+Abaixo, veja um exemplo de um algoritmo de validação, de aprovação de estudante.
+
+Sem identação:
+```java
+
+// arquivo BoletimEstudantil.java
+
+public class BoletimEstudantil {
+public static void main(String[] args) {
+int mediaFinal = 6;
+if(mediaFinal<6)
+System.out.println("REPROVADO");
+else if(mediaFinal==6)
+System.out.println("PROVA MINERVA");
+else
+System.out.println("APROVADO"); 		
+}
+}
+```
+<br>
+
+Com identação:
+java
+```java
+public class BoletimEstudantil {
+    public static void main(String[] args) {
+        int mediaFinal = 6;
+        if (mediaFinal < 6)
+            System.out.println("REPROVADO");
+        else if (mediaFinal == 6)
+            System.out.println("PROVA MINERVA");
+        else
+            System.out.println("APROVADO");
+    }
+}
+```
+
+<br>
+
