@@ -443,3 +443,230 @@ escalável.
 
 <br>
 
+### Aula 06
+#### Declaração e Atribuição
+
+Declaração e atribuição de variáveis é uma das etapas fundamentais em programação, pois permite armazenar dados na
+memória do computador para uso futuro. A aplicação de regras claras e precisas ajuda a evitar erros de sintaxe e de
+lógica, bem como torna o código mais legível e fácil de manter.
+
+Os métodos com e sem retorno também são importantes, pois permitem organizar o código em blocos reutilizáveis e mantê-lo
+claro e conciso. Os métodos com retorno devolvem um valor, enquanto os métodos sem retorno não retorna nada. É
+importante escolher a abordagem adequada para cada tarefa.
+
+Finalmente, tornar uma variável uma constante pode ser útil quando você quer garantir que seu valor não mude
+acidentalmente durante a execução do programa. Isso ajuda a preservar a integridade dos dados e a evitar erros de
+lógica. Em geral, é uma boa prática usar constantes sempre que possível para garantir que o código seja claro, preciso e
+fácil de manter.
+
+<br>
+
+**Declaração de variáveis**
+
+
+Uma variável é uma referência a um espaço de memória utilizado pelo seu programa. De acordo com as convenções da
+linguagem de programação, cada variável é composta por três elementos: tipo de dados, identificação e valor atribuído.
+
+A estrutura padrão para se declarar uma variável sempre é:
+
+``<Tipo> <nomeVariável> <atribuiçãoDeValorOpcional>``
+
+<br>
+Exemplos abaixo:
+
+```java
+int idade; //Tipo "int", nome "idade", com nenhum valor atribuído.
+int anoFabricacao = 2021; //tipo "int", nome "anoFabricacao", com valor 2021.
+double salarioMinimo = 2.500; //tipo "double", nome "salarioMinimo", valor 2.500.
+```
+
+<br>
+
+````
+🔔 Atenção
+
+Existe algumas peculiaridades a trabalhar com alguns tipos específicos. Observe no exemplo abaixo:
+````
+
+```java
+
+public class TipoDados {
+    public static void main(String[] args) {
+        byte idade = 123;
+        short ano = 2021;
+        int cep = 21070333; // se começar com 0, talvez tenha que ser outro tipo
+        long cpf = 98765432109L; // se começar com 0, talvez tenha que ser outro tipo
+        float pi = 3.14F;
+        double salario = 1275.33;
+    }
+}
+```
+
+````
+✔️ Conclusão
+
+Observe que o tipo long precisa terminar com L, o tipo float precisa terminar com F e alguns cenários do dia-a-dia,
+podem estimular uma alteração de tipos de dados convencional.
+````
+
+Muitas das vezes criamos uma variável, definimos um valor correspondente, manipulamos esta variável e temos consciência
+de seu valor na aplicação. Mas, cuidado!
+
+````
+🔔 Atenção
+
+Java é linguagem de programação fortemente "tipado".
+````
+
+Veja o exemplo abaixo:
+
+```java
+
+// TiposEVariaveis.java
+
+short numeroCurto = 1;
+int numeroNormal = numeroCurto;
+short numeroCurto2 = numeroNormal;
+
+// Mesmo sabendo que numeroNormal é igual a numeroCurto,
+// não é possível atribuir a numeroCurto2
+```
+
+<br>
+
+### Declaração de constantes
+
+
+As Constantes, são valores armazenados em memória que não podem ser modificados depois de declarados. Em Java, esses
+valores são representados pela palavra reservada `final`, seguida do tipo. Por convenção, Constantes são sempre escritas
+em CAIXA ALTA.
+
+Abaixo, temos um exemplo explicativo sobre uso de variáveis e constantes:
+
+```java
+
+public class ExemploVariavel {
+public static void main(String[] args) {
+    /*
+    * esta linha é considerada como declaração de variável iniciamos a existência
+    * variável numero com valor 5 regra: tipo + nome + valor
+    */
+    int numero = 5;
+
+    /*
+    * na linha abaixo iremos alterar o valor do variável para 10 observe que o tipo
+    * não é mais necessário, pois a variável já foi declarada anteriormente
+    */
+    numero = 10;
+
+    System.out.print(numero);
+
+    /*
+    * ao usar a palavra reservada final, você determina que jamais
+    * esta variavel poderá obter outro valor;
+    * logo a linha 25 vai apresentar um erro de compilação
+    * isso é considerado uma CONSTANTE na linguagem Java
+    */
+    final double VALOR_DE_PI = 3.14;
+
+    VALOR_DE_PI=3.15; //Esta linha vai apresentar erro de compilação!
+}
+}
+```
+
+````
+🔔 Atenção
+
+Compreendemos que, para declarar uma variável como uma constante, utilizamos a palavra final, mas por convenção, esta
+variável deverá ser escrita toda em caixa alta.
+````
+
+<br>
+### Declaração de métodos
+
+
+Uma classe é definida por atributos e métodos. Já vimos que atributos são, em sua grande maioria, variáveis de
+diferentes tipos e valores. Os métodos, por sua vez, correspondem a funções ou sub-rotinas disponíveis dentro de nossas
+classes.
+
+**Critério de Nomeação de Métodos**
+
+Esses critérios não são obrigatórios, mas é recomendável que sejam seguidos, pois essas convenções facilitam a vida dos
+programadores ao trabalharem em códigos de forma colaborativa. Ao seguir estas convenções, tornamos o código mais
+legível para nós e também para outras pessoas. Para métodos, os critérios são:
+
+* Deve ser nomeado como verbo;
+* Seguir o padrão camelCase (Todas as letras minúsculas com a exceção da primeira letra da segunda palavra).
+
+Exemplo de nomeação de métodos:
+
+```java
+somar(int n1, int n2){}
+
+abrirConexao(){}
+
+concluirProcessamento() {}
+
+findById(int id){}
+
+calcularImprimir(){}
+```
+
+<br>
+
+### Definindo parâmetros e retorno de métodos
+
+Mas, como sabemos a melhor forma, de definir os métodos das nossas classes? Para chegar à essa conclusão, somos
+auxiliados por uma convenção estrutural para todos os métodos. Essa convenção é determinada pelos aspectos abaixo:
+
+1. **Qual a proposta principal do método?** Você deve se perguntar constantemente até compreender a real finalidade do
+mesmo.
+2. **Qual o tipo de retorno esperado após executar o método?** Você deve analisar se o método será responsável por retornar
+algum valor ou não.
+3. **Qual o tipo de parâmetro esperado pelo método?** Você deve analisar se o método irá receber algum parâmetro ou não.
+4. **O método possui o risco de apresentar alguma exceção?** Exceções são comuns na execução de métodos, as vezes é
+necessário prever e tratar a possível existência de uma exceção. 
+5. **Qual a visibilidade do método?** Avaliar se será necessário que o método seja visível a toda aplicação, somente em
+pacotes, através de herança ou somente a nível a própria classe.
+
+Abaixo, temos um exemplo de uma classe com alguns métodos e suas respectivas considerações:
+
+```java
+public class MyClass {
+
+	public double somar(int num1, int num2){
+		//LOGICA - FINALIDADE DO MÉTODO
+		return ... ;
+	}
+	
+	public void imprimir(String texto){
+		//LOGICA - FINALIDADE DO MÉTODO
+		//AQUI NÃO PRECISA DO RETURN
+		//POIS NÃO SERÁ RETORNADO NENHUM RESULTADO
+	}
+	// throws Exception : indica que o método ao ser utilizado
+	// poderá gerar uma exceção
+	public double dividir(int dividendo, int divisor) throws Exception{}
+	
+	// este método não pode ser visto por outras classes no projeto
+	private void metodoPrivado(){}
+	
+	//alguns equívocos estruturais
+	public void validar(){
+		//este método deveria retornar algum valor
+		//no caso boolean (true ou false)
+	}
+	public void calcularEnviar(){
+		//um método deve representar uma única responsabilidade
+	}
+	public void gravarCliente(String nome, String cpf, Integer telefone, ....){
+		//este método tem a finalidade de gravar
+		//informações de um cliente, por que não criar
+		//um objeto cliente e passar como parâmetro ?
+		//veja abaixo
+	}
+	public void gravarCliente(Cliente cliente){}
+	//ou
+	public void gravar(Cliente cliente){}
+}
+``
