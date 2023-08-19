@@ -334,7 +334,7 @@ System.out.println("APROVADO");
 <br>
 
 Com identação:
-java
+
 ```java
 public class BoletimEstudantil {
     public static void main(String[] args) {
