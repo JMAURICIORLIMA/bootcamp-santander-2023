@@ -670,3 +670,141 @@ public class MyClass {
 	public void gravar(Cliente cliente){}
 }
 ```
+
+<br>
+
+### Aula 07
+#### Tipos e variáveis
+
+Com toda certeza, uma hora ou outra, seja na sua vida acadêmica ou profissional na área de desenvolvimento você já ouviu
+falar em tipos de variáveis. Isso se deve ao fato de que o computador tem a necessidade que o programador “explique”
+para ele o que exatamente quer, da forma mais especificada possível, e no Java não é diferente.
+
+<br>
+
+#### Tipos primitivos
+
+Em Java, existem palavras reservadas especiais para representar tipos básicos de dados que são essenciais para construir
+programas. Estes tipos básicos são chamados de tipos primitivos.
+
+````
+📌 Para fixar
+
+Os oito tipos primitivos em Java são:
+
+int, byte, short, long, float, double, boolean e char – esses tipos não são objetos e portanto representam valores
+brutos. Eles são armazenados diretamente na pilha de memória.
+````
+
+Tabela de Tipos Primitivos e seus valores:
+
+| Tipo  | Memória | Valor Mínimo               | Valor Máximo              |
+|-------|---------|----------------------------|---------------------------|
+| byte  | 1 byte  | -128                       | 127                       |
+| short | 2 byte  | -32.768                    | 32.767                    |
+| int	 | 4 bytes | -2.147.483.648             | 2.147.483.647             |
+| long  | 8 bytes | -9.223.372.036.854.775.808 | 9.223.372.036.854.775.807 |
+
+Os tipos primitivos, que podem conter partes fracionárias:
+
+| Tipo   | Memória | Valor Mínimo   | Valor Máximo   | Precisão      |
+|--------|---------|----------------|----------------|---------------|
+| float  | 4 bytes | -3,4028E + 38  | 3,4028E + 38   | 6 – 7 dígitos |
+| double | 8 bytes | -1,7976E + 308 | 1,7976E + 308  | 15 dígitos    |
+
+Embora o tipo `float` ocupe menos espaço na memória do que o tipo `double`, ele é menos utilizado devido a uma limitação
+na precisão decimal entre 6 e 7 dígitos.
+
+Com os avanços nos computadores, não há mais a necessidade de se preocupar com o uso dos tipos `short` e `byte`, pois a
+memória é abundante.
+
+De maneira semelhante, o tipo `long` também é pouco utilizado, pois valores grandes são raros de se trabalhar.
+
+Portanto, na maioria das situações, utilizamos o tipo `int` para representar números inteiros ou `double` para
+representar números fracionados.
+
+````
+ℹ️ Informação
+
+Devemos compreender que os tipos primitivos sempre terão um valor padrão mesmo NÃO havendo uma atribuição explícita,
+veja o código abaixo:
+````
+
+```java
+byte 	b; //b=0
+short 	s; //s=0
+int 	i; //i=0
+long 	l; //l=0
+
+float 	f; //f=0.0
+double 	d; //d=0.0
+
+char    c; //c='\u0000'
+boolean o; //b=false
+```
+ <br>
+
+#### Declaração de variáveis
+
+
+Uma variável é uma referência a um espaço de memória utilizado pelo seu programa. De acordo com as convenções da linguagem de programação, cada variável é composta por três elementos: tipo de dados, identificação e valor atribuído.
+
+A estrutura padrão para se declarar uma variável sempre é:
+
+`<Tipo> <nomeVariável> <atribuiçãoDeValorOpcional>`
+
+Exemplos abaixo:
+```java
+int idade; //Tipo "int", nome "idade", com nenhum valor atribuído.
+int anoFabricacao = 2021; //tipo "int", nome "anoFabricacao", com valor 2021.
+double salarioMinimo = 2.500; //tipo "double", nome "salarioMinimo", valor 2.500.
+```
+
+````
+🔔 Atenção
+
+Existe algumas peculiaridades a trabalhar com alguns tipos específicos. Observe no exemplo abaixo:
+````
+```java
+public class TipoDados {
+    public static void main(String[] args) {
+        byte idade = 123;
+        short ano = 2021;
+        int cep = 21070333; // se começar com 0, talvez tenha que ser outro tipo
+        long cpf = 98765432109L; // se começar com 0, talvez tenha que ser outro tipo
+        float pi = 3.14F;
+        double salario = 1275.33;
+    }
+}
+```
+
+````
+✔️ Conclusão
+
+Observe que o tipo long precisa terminar com L, o tipo float precisa terminar com F e alguns cenários do dia-a-dia,
+podem estimular uma alteração de tipos de dados convencional.
+````
+
+Muitas das vezes criamos uma variável, definimos um valor correspondente, manipulamos esta variável e temos consciência
+de seu valor na aplicação. Mas, cuidado!
+
+````
+🔔 Atenção
+
+Java é linguagem de programação fortemente "tipado".
+````
+
+Veja o exemplo abaixo:
+
+```java
+
+// TiposEVariaveis.java
+
+short numeroCurto = 1;
+int numeroNormal = numeroCurto;
+short numeroCurto2 = numeroNormal;
+
+// Mesmo sabendo que numeroNormal é igual a numeroCurto,
+// não é possível atribuir a numeroCurto2
+```
+
