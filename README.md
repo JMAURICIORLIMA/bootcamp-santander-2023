@@ -855,4 +855,100 @@ public class ExemploVariavel {
 Compreendemos que, para declarar uma variável como uma constante, utilizamos a palavra final, mas por convenção, esta
 variável deverá ser escrita toda em caixa alta.
 ````
+<br>
+
+### Aula 09
+#### Operadores
+
+Você já ouviu aquela frase antiga que diz que programação é simplesmente uma lista de instruções lógicas que, quando
+executadas, nos entrega resultados incríveis? Bem, é isso mesmo! Quando começamos a escrever o nosso primeiro código,
+logo percebemos que uma das coisas mais comuns é pedir informações ao usuário, fazer algumas operações lógicas e, em
+seguida, apresentar o resultado final.
+
+![](https://sintaxe.netlify.app/assets/sintaxe-2.dbb41438.jpg)
+
+#### Classificação do Operadores
+**Atribuição**
+
+Representado pelo símbolo de igualdade `=`.
+
+O operador de atribuição é utilizado para definir o valor inicial ou sobrescrever o valor de uma variável. em Java,
+definimos um tipo, nome e opcionalmente atribuímos um valor à variável através do operador de atribuição. Exemplos
+abaixo:
+
+```java
+//classe Operadores.java
+String nome = "GLEYSON";
+int idade = 22;
+double peso = 68.5;
+char sexo = 'M';
+boolean doadorOrgao = false;
+Date dataNascimento = new Date();
+```
+<br>
+
+**Aritméticos**
+
+O operador aritmético, é utilizado para realizar operações matemáticas entre valores numéricos, podendo se tornar ou não
+uma expressão mais complexa.
+
+Os operadores aritméticos são: `+` (adição), `-` (subtração), `*` (multiplicação) , `/` (divisão) e `%` (módulo).
+
+```java
+//classe Operadores.java
+double soma = 10.5 + 15.7;
+int subtração = 113 - 25;
+int multiplicacao = 20 * 7;
+int divisao = 15 / 3;
+int modulo = 18 % 3;
+double resultado = (10 * 7) + (20/4);
+```
+
+<br>
+
+**Atribuição abreviada de aritméticos**
+
+Acabamos de aprender sobre operadores de atribuição e aritméticos, porém a linguagem Java ofere meios de abreviação
+juntando estes dois contextos conforme abaixo:
+
+```java
+  //classe Operadores.java
+  /*
+    Vamos imaginar que n1 começaria com valor 10 e n2 com valor 5
+    mas em seguida gostaria de somar o valor de n1 e n2 e atribuir a n2.
+  */
+  int n1 = 10;
+  int n2 = 5;
+
+  //forma literal
+  n2 = n2 + n1;
+
+  //forma abreviada
+  n2 += n1;
+
+  System.out.println(n2);
+```
+````
+🔔 Atenção
+
+O operador de adição (+), quando utilizado em variáveis do tipo texto, realizará a “concatenação de textos”.
+````
+
+```java
+    //classe Operadores.java
+    String nomeCompleto = "LINGUAGEM" + "JAVA";
+
+    //qual o resultado das expressões abaixo?
+    String concatenacao ="?";
+
+    concatenacao = 1+1+1+"1";
+
+    concatenacao = 1+"1"+1+1;
+
+    concatenacao = 1+"1"+1+"1";
+
+    concatenacao = "1"+1+1+1;
+
+    concatenacao = "1"+(1+1+1);
+```
 
