@@ -997,3 +997,130 @@ System.out.println("Inverteu " + !verdadeiro);
 Muito cuidado com ordem de precedência, dos operadores unários!
 ````
 
+<br>
+
+### Aula 11
+#### Operadores de incremento e decremento.
+
+Os operadores de incremento e decremento são usados em programação para aumentar ou diminuir o valor de uma variável por
+uma unidade. Eles são frequentemente utilizados em laços de repetição, cálculos matemáticos e outras situações em que
+você precisa ajustar o valor de uma variável.
+
+Aqui estão os operadores de incremento e decremento em Java:
+
+1. **Operador de Incremento (++):**
+   O operador de incremento (`++`) aumenta o valor da variável em uma unidade.
+
+   Exemplo:
+   ```java
+   int contador = 5;
+   contador++; // Incrementa contador para 6
+   ```
+
+2. **Operador de Decremento (--):**
+   O operador de decremento (`--`) diminui o valor da variável em uma unidade.
+
+   Exemplo:
+   ```java
+   int contador = 10;
+   contador--; // Decrementa contador para 9
+   ```
+
+Além disso, os operadores de incremento e decremento podem ser usados em diferentes posições em uma expressão, o que
+resultará em diferentes efeitos:
+
+- Se o operador estiver antes da variável (prefixo), o valor será incrementado ou decrementado antes da avaliação da
+expressão.
+
+  Exemplo:
+  ```java
+  int x = 5;
+  int y = ++x; // y será 6, x será 6
+  ```
+
+- Se o operador estiver depois da variável (sufixo), o valor será incrementado ou decrementado após a avaliação da
+expressão.
+
+  Exemplo:
+  ```java
+  int a = 10;
+  int b = a--; // b será 10, a será 9
+  ```
+
+Lembre-se de que o uso adequado desses operadores é importante para garantir que você obtenha os resultados esperados
+em seu código. Além disso, evite usá-los de maneira complexa em expressões para evitar confusão e melhorar a
+legibilidade do código.
+
+Exemplos que demonstram os resultados dos operadores de incremento e decremento tanto pós-incremento como
+pós-decremento, assim como os resultados dos operadores de pré-incremento e pré-decremento.
+
+**Operador de Pós-Incremento (`++`):**
+```java
+int a = 5;
+int b = a++; // b recebe o valor original de 'a' (5), depois 'a' é incrementado para 6
+
+System.out.println("a: " + a); // a será 6
+System.out.println("b: " + b); // b será 5
+```
+
+**Operador de Pós-Decremento (`--`):**
+```java
+int x = 8;
+int y = x--; // y recebe o valor original de 'x' (8), depois 'x' é decrementado para 7
+
+System.out.println("x: " + x); // x será 7
+System.out.println("y: " + y); // y será 8
+```
+
+**Operador de Pré-Incremento (`++`):**
+```java
+int c = 3;
+int d = ++c; // c é incrementado para 4 antes de ser atribuído a 'd'
+
+System.out.println("c: " + c); // c será 4
+System.out.println("d: " + d); // d será 4
+```
+
+**Operador de Pré-Decremento (`--`):**
+```java
+int m = 9;
+int n = --m; // m é decrementado para 8 antes de ser atribuído a 'n'
+
+System.out.println("m: " + m); // m será 8
+System.out.println("n: " + n); // n será 8
+```
+
+Observe como os resultados são diferentes dependendo se você usa os operadores de incremento e decremento como
+pós-incremento/decremento ou pré-incremento/decremento. Isso acontece porque a operação ocorre antes ou depois da
+atribuição da variável, afetando o valor que a variável terá após a operação.
+
+Um exemplo de como usar o operador de negação (`!`) para inverter o valor de uma variável booleana:
+
+```java
+public class ExemploNegacao {
+
+    public static void main(String[] args) {
+        boolean estado = true;
+        
+        // Invertendo o valor da variável 'estado' usando o operador de negação
+        boolean estadoInvertido = !estado;
+        
+        System.out.println("Estado original: " + estado);
+        System.out.println("Estado invertido: " + estadoInvertido);
+    }
+}
+```
+
+Neste exemplo, a variável `estado` é inicializada como `true`. Usando o operador de negação `!`, o valor de `estado` é
+invertido para `false` e atribuído à variável `estadoInvertido`.
+
+A saída do programa será:
+
+```
+Estado original: true
+Estado invertido: false
+```
+
+O operador de negação é útil para inverter o valor booleano de expressões lógicas, testar condições de não-verdadeiro e
+outras situações em que você precisa negar uma afirmação.
+
