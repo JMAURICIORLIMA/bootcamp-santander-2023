@@ -1571,4 +1571,94 @@ Assim como nas classificações gramaticais da língua portuguesa, existem algum
 | extends | implements | enquanto extends determina que uma classe estende outra classe, implements determina que uma classe implementa uma interface, porém nunca o contrário.                                                                                                         |
 | final   | abstract   | enquanto final determina fim de alteração de valor ou lógica comportamental, abstract em métodos, exige que sub-classes precisarão definir comportamento e um método abstrato. NOTA: Se uma classe contém um único método abstrato, toda classe precisa ser.   |
 | throws  | throw      | Esta é uma das situações mais complicadas, de compreensão destas duas palavras. Enquanto a throws determina que um método pode lançar uma exceção, throw é a implementação que dispara a exceção. Vamos conhecer mais sobre este conceito no assunto Exceções. |
+<br>
+
+### Aula 18
+#### Documentação e comentários
+
+Uma das maiores características da linguagem Java é que, desde suas primeiras versões, tínhamos em nossas mãos, uma
+documentação rica e detalhada dos recursos da linguagem.
+
+Conforme site oficial, podemos compreender e explorar, todos os recursos organizados por pacotes e classes bem
+específicas, sem nem mesmo escrever uma linha de código.
+
+Hoje, costuma-se afirmar que, para se tornar um desenvolvedor nível avançado, é um requisito imprescindível adquirir a
+habilidade de compreender, a documentação oficial da linguagem e dos frameworks que são incorporados nos projetos
+atuais.
+
+Aqui, temos o link da documentação de uma das principais classes da linguagem Java:
+
+[String (Java Platform SE 7)](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html)
+ e 
+[Documentação Java SE 8](https://docs.oracle.com/javase/8/docs/api/)
+
+Javadoc é um gerador de documentação criado pela Sun Microsystems para documentar a API dos programas em Java, a partir
+do código-fonte. O resultado é expresso em HTML. É constituído, basicamente, por algumas marcações muitos simples
+inseridas nos comentários do programa.
+
+Este sistema é o padrão de documentação de classes em Java, e muitas dos IDEs desta linguagem irão automaticamente gerar
+um Javadoc em HTML.
+
+#### Tags
+
+Os desenvolvedores usam certos estilos de comentários e tags Javadoc ao documentar códigos-fonte. Um bloco de comentário
+em Java iniciado com /** irá iniciar um bloco de comentário Javadoc, que será incluído no HTML gerado. Uma tag Javadoc
+começa com um "@" (arroba). Na tabela abaixo, algumas destas tags.
+
+| tag         | descrição                                                                                                                    |
+|-------------|------------------------------------------------------------------------------------------------------------------------------|
+| @author     | Nome do desenvolvedor                                                                                                        |
+| @deprecated | Marca o método como deprecated. Algumas IDEs exibirão um alerta de compilação se o método for chamado.                       |
+| @exception  | Documenta uma exceção lançada por um método — veja também @throws.                                                           |
+| @param      | Define um parâmetro do método. Requerido para cada parâmetro.                                                                |
+| @return     | Documenta o valor de retorno. Essa tag não deve ser usada para construtores ou métodos definidos com o tipo de retorno void. |
+| @see        | Documenta uma associação a outro método ou classe.                                                                           |
+| @since      | Documenta quando o método foi adicionado a a classe.                                                                         |
+| @throws     | Documenta uma exceção lançada por um método. É um sinônimo para a @exception introduzida no Javadoc 1.2.                     |
+| @version    | Exibe o número da versão de uma classe ou um método.                                                                         |
+
+Vamos explorar como documentar um classe simples que realizar a divisão entre dois números inteiros.
+```java
+/**
+* Calculadora Simples
+* @author Gleyson Sampaio
+  */
+  public class Calculadora {
+  /**
+    * Realiza a divisão entre dois números inteiros
+    *
+    * @param dividendo     Número que será dividido
+    * @param divisor       Número que irá dividir o dividendo
+    * @return              O resultado da divisão entre o dividendo e o divisor
+    * @author              Gleyson Sampaio
+    * @exception 	        java.lang.ArithmeticException em caso de passar o divisor igual a zero 0.
+      */
+      static Integer dividir(Integer dividendo, Integer divisor){
+      return dividendo / divisor;
+    }
+}
+```
+![](/home/mauricio/Imagens/Capturas de tela/Captura de tela de 2023-08-23 14-30-17.png)
+#
+![](/home/mauricio/Imagens/Capturas de tela/Captura de tela de 2023-08-23 14-30-32.png)
+#
+![](/home/mauricio/Imagens/Capturas de tela/Captura de tela de 2023-08-23 14-31-09.png)
+#
+![](/home/mauricio/Imagens/Capturas de tela/Captura de tela de 2023-08-23 14-31-22.png)
+#
+![](/home/mauricio/Imagens/Capturas de tela/Captura de tela de 2023-08-23 14-32-07.png)
+#
+
+````
+Nota: Para gerar a documentação via intellij
+
+Navegue pela aba de menu > Tools
+
+Generate JavaDoc...
+
+Defina os paramêntros e diretório para geração da documentação e confirme
+````
+#
+![](/home/mauricio/Imagens/Capturas de tela/Captura de tela de 2023-08-23 15-05-06.png)
+
 
