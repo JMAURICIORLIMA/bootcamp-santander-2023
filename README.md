@@ -1706,3 +1706,41 @@ Vamos ilustrar como executar uma classe, depois de compilada, sem precisar usar 
 4. Agora digite o comando: **java MinhaClasse** (nome da sua classe sem a extensão **.class**).
 
 ![](https://3025166959-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FjFR9F4NToQ6FD39fU3wC%2Fuploads%2Fgit-blob-178df39af2221a5577f56bcc1310fff651679ffe%2Fimage%20(14)%20(1).png?alt=media)
+
+<br>
+
+### Aula 20
+#### Argumentos
+
+Quando executamos uma classe, que contenha o método main, o mesmo permite que passemos um array `[]` de argumentos, do
+tipo String. Logo, podemos após a definição da classe a ser executada, informar estes parâmetros, exemplo:
+
+````
+java MinhaClasse agumentoUm argumentoDois
+````
+
+Exemplo:
+
+```java
+public class AboutMe {
+    public static void main(String[] args) {
+        //os argumentos começam com indice 0
+        String nome = args [0];
+        String sobrenome = args [1];
+        int idade = Integer.valueOf(args[2]); //vamos falar sobre Wrappers
+        double altura = Double.valueOf(args[3]);
+
+        System.out.println("Ola, me chamo " + nome + " " + sobrenome);
+        System.out.println("Tenho " + idade + " anos ");
+        System.out.println("Minha altura é " + altura + "cm ");
+    }
+}
+```
+
+**Terminal - Linux**
+1. Localize o diretório do arquivo.
+2. Abra o terminal onde está o arquivo - Botão direito do mouse e abri terminal.
+3. Insira o comando `java` `<NoDaClasse>.java` `<Argumento[0]>` `<Argumento[1]>` `<Argumento[2]>` `<Argumento[3]>`
+4. Confirme com **Enter**
+
+![](/home/mauricio/Imagens/Capturas de tela/Captura de tela de 2023-08-23 17-46-29.png)
