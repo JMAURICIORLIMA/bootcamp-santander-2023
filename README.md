@@ -1423,3 +1423,152 @@ double saldo=10.0;
 	}
 }
 ```
+<br>
+
+### Aula 17
+#### Palavras Reservadas
+
+
+Palavras reservadas do java, ou keywords(palavras-chave), são palavras que possuem significado especifico no código.
+
+A linguagem contém 52 palavras distribuídas em categorias com finalidades e fronteiras de uso bem definidas conforme
+tabela abaixo:
+
+**Descrevendo as palavras**
+
+As palavras reservadas na linguagem Java possuem regras de indentificação e utilização conforme descrição abaixo:
+
+![](https://sintaxe.netlify.app/assets/sintaxe-4.c9e469a6.png)
+
+* Todas as palavras reservadas são minúsculas
+* Nenhuma palavra reservada poderá ser utilizada definir nome de variáveis e métodos
+* As palavras reservas determinam recursos ou caracteríticas de forma individual ou agrupada para o seu algorítimo
+* Conhecer e compreender todas as 52 palavras reservadas leva tempo e prática
+
+**Agrupando as palavras**
+
+Para uma melhor interpretação e compreensão do uso das palavras reservadas em nosso cotidiano, é necessário
+primeiramente, uma organização e classificação das mesmas. Sendo assim, será mais fácil compreender sua aplicabilidade
+#
+**Modificadores de acesso**
+
+| Palavra | 	Descrição                                       |	Classe |	Variável |	Método |
+|---------|--------------------------------------------------|--------|-------------|---------|
+|public | 	Acesso de qualquer classe                       |	X |	X |	X |
+|private | 	Acesso apenas dentro da classe                  |	X |	X |	X |
+|protected | 	Acesso por classes no mesmo pacote e subclasses |	X |	X |	X |
+#
+**Tipos primitivos**
+
+| Palavra | 	Descrição     |	Classe | Variável | 	Método |
+|---------|----------------|--------|----------|--------|
+|boolean |	um valor indicando verdadeiro ou falso | X | no retorno | |
+|byte |	um inteiro de 8 bits (signed) |	X |	no retorno | |
+|char |	um carácter Unicode (16bit unsigned) (signed) |	X |	no retorno | |
+|double |	um carácter Unicode (16bit unsigned) (signed) |	X |	no retorno | |
+|float |	um número de ponto flutuante de 32 bits |	X |	no retorno | |
+#
+**Modificadores de classes, variáveis ou métodos**
+
+| Palavra      | 	Descrição                                                                                                                                           | 	Classe |	Variável |	Método |
+|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------|---------|-------------|---------|
+| abstract     | classe que não pode ser instanciada ou método que precisa ser implementado, por uma subclasse não abstrata                                           | X       |	
+| class        | especifica uma classe                                                                                                                                | X	      |
+| extends      | indica a superclasse que a subclasse está estendendo                                                                                                 | X       |		
+| final        | impossibilita que uma classe seja estendida, que um método seja sobrescrito ou que uma variável seja reinicializada	                               | X       |	X |	X |
+| implements   | indica as interfaces que uma classe irá implementar                                                                                                  | X       |		
+| interface    | especifica uma interface                                                                                                                             | X       |		
+| native       | indica que um método está escrito em uma linguagem dependente de plataforma, como o C                                                                | X       |
+| new          | instancia um novo objeto, chamando seu construtor                                                                                                    | X       |
+| static       | faz um método ou variável pertencer à classe ao invés de às instâncias                                                                               | X       |
+| strictfp     | usado em frente a um método ou classe para indicar que os números de ponto flutuante seguirão as regras de ponto flutuante, em todas as expressões   | X       |
+| synchronized | indica que um método só pode ser acessado por uma thread de cada vez                                                                                 | X       |
+| transient    | impede a serialização de campos                                                                                                                      | X       |
+| volatile     | indica que uma variável pode ser alterada durante o uso de threads                                                                                   | X       |
+#
+**Controle de fluxo dentro de um bloco de código**
+
+| Palavra    | 	Descrição                                                                                                                                     | 	Classe | Variável | 	Método |
+|------------|------------------------------------------------------------------------------------------------------------------------------------------------|---------|----------|---------|
+| break      | sai do bloco de código em que ele está                                                                                                         |         |          | fluxo   |
+| case       | executa um bloco de código dependendo do teste do switch                                                                                       |         |          | X       |
+| continue   | pula a execução do código que viria, após essa linha e vai para a próxima passagem do loop                                                     |         |          | fluxo   |
+| default    | executa esse bloco de código caso nenhum dos teste de switch-case seja verdadeiro                                                              |         |          | X       |
+| do         | executa um bloco de código uma vez, e então realiza um teste em conjunto com o while para determinar se o bloco deverá ser executado novamente |         |          | X       |
+| else       | executa um bloco de código alternativo caso o teste "if" seja falso                                                                            |         |          | X       |
+| for        | usado para realizar um loop condicional de um bloco de código                                                                                  |         |          | X       |
+| if         | usado para realizar um teste lógico de verdadeiro ou falso                                                                                     |         |          | X       |
+| instanceof | determina se um objeto é uma instância de determinada classe, superclasse ou interface                                                         |         |          | X       |
+| return     | retorna um método sem executar qualquer código, que venha depois desta linha (também pode retornar uma variável)                               |         |          | X       |
+| switch     | indica a variável a ser comparada nas expressões case                                                                                          |         |          | X       |
+| while      | executa um bloco de código repetidamente enquanto a condição for verdadeira                                                                    |         |          | X       |
+#
+**Tratamento de erros**
+
+| Palavra | 	Descrição                                                                                                                   | Classe | Variável | Método     |
+|---------|------------------------------------------------------------------------------------------------------------------------------|--------|----------|------------|
+| assert  | 	testa uma expressão condicional, para verificar uma suposição do programador                                                |        |          | X          |
+| catch   | 	declara o bloco de código usado para tratar uma exceção                                                                     |        |          | X          |
+| finally | 	bloco de código, após um try-catch, que é executado independentemente do fluxo de programa seguido ao lidar com uma exceção |        |          | X          |
+| throw   | 	usado para passar uma exceção para o método que o chamou                                                                    |        |          | X          |
+| throws  | 	indica que um método pode passar uma exceção para o método que o chamou                                                     |        |          | assinatura |
+| try     | 	bloco de código que tentará ser executado, mas que pode causar uma exceção                                                  |        |          | X          |
+#
+**Controle de pacotes**
+
+| Palavra | Descrição                                                           | Classe | Variável | Método |
+|---------|---------------------------------------------------------------------|--------|----------|--------|
+| import  | importa pacotes ou classes para dentro do código                    | X      |          |        |
+| package | especifica a que pacote, todas as classes de um arquivo pertencem.  | X      |          |        |
+#
+**Variáveis de referência**
+
+| Palavra | Descrição                             | Classe | Variável | Método |
+|---------|---------------------------------------|--------|----------|--------|
+| super   | refere-se a superclasse imediata      |        |          | X      |
+| this    | refere-se a instância atual do objeto |        |          | X      | 
+#
+**Palavras reservadas não utilizadas**
+
+| Palavra | Descrição                                                           | Classe | Variável | Método |
+|---------|---------------------------------------------------------------------|--------|----------|--------|
+| const   | não utilize para declarar constantes                                |        |          |        |
+| goto    | não implementada na linguagem Java, por ser considerada prejudicial |        |          |        |
+
+
+#### Combinação de palavras
+
+Abaixo, iremos exercitar algumas das possibilidades mais recorrentes em combinar o uso das palavras reservadas a níveis
+de: Classe, Atributos e Métodos
+
+| Nível    | Combinação           | Explicação                                                             |
+|----------|----------------------|------------------------------------------------------------------------|
+| classe   | public class         | Determina que a classe é pública                                       |
+| classe   | abstract class       | Determina que a classe é abstrata                                      |
+| classe   | final class          | Determina que a classe é final e não pode ser herdada                  |
+| classe   | class A extends B    | Determina que a classe A herda da classe B                             |
+| classe   | class A implements B | Determina que a classe A implementa a interface B                      |
+| atributo | public static        | Determina que o atributo é público e estático (nível de classe)        |
+| atributo | public static final  | Determina que o atributo é público, estático e inalterável (constante) |
+| método   | abstract void        | Determina que o método é abstrato e sem retorno                        |
+| método   | synchronized void    | Determina que o método é sincronizado e sem retorno                    |
+
+````
+🔔 Atenção
+
+A tabela acima é somente uma ilustração e um direcionamento para você poder fixar um pouco mais o conceito das palavras 
+reservadas na linguagem Java.
+````
+#
+#### Palavras "opostas"
+
+Assim como nas classificações gramaticais da língua portuguesa, existem algumas palavras que são completamente opostas
+(antônimas) na linguagem Java conforme tabela abaixo:
+
+| Palavra | Palavra    | Explicação                                                                                                                                                                                                                                                     |
+|---------|------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| package | import     | Enquanto package determina o diretório real da classe, o import informa de onde será importada a classe. Isso porque, podemos ter classes de mesmo nome.                                                                                                       |
+| extends | implements | enquanto extends determina que uma classe estende outra classe, implements determina que uma classe implementa uma interface, porém nunca o contrário.                                                                                                         |
+| final   | abstract   | enquanto final determina fim de alteração de valor ou lógica comportamental, abstract em métodos, exige que sub-classes precisarão definir comportamento e um método abstrato. NOTA: Se uma classe contém um único método abstrato, toda classe precisa ser.   |
+| throws  | throw      | Esta é uma das situações mais complicadas, de compreensão destas duas palavras. Enquanto a throws determina que um método pode lançar uma exceção, throw é a implementação que dispara a exceção. Vamos conhecer mais sobre este conceito no assunto Exceções. |
+
