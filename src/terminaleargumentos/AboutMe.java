@@ -1,22 +1,31 @@
 package terminaleargumentos;
 
-public class AboutMe {
+import java.util.Locale;
+import java.util.Scanner;
 
-    /*
-    * Esta classe apesar de não apresentar nenhum erro de sintax, não consegue ser executada pela IDE.
-     */
+public class AboutMe {
 
     public static void main(String[] args) {
 
-        //os argumentos começam com indice 0
-        String nome = args[0];
-        String sobrenome = args[1];
-        int idade = Integer.valueOf(args[2]); //vamos falar sobre Wrappers
-        double altura = Double.valueOf(args[3]);
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+
+        System.out.print("Informe seu primeiro nome: ");
+        String nome = sc.nextLine();
+
+        System.out.print("Informe seu segundo nome: ");
+        String sobrenome = sc.nextLine();
+
+        System.out.print("Informe sua idade: ");
+        int idade = sc.nextInt();
+
+        System.out.print("Informe sua altura: ");
+        double altura = sc.nextDouble();
+
+        System.out.println("\n|----------------------------|\n");
 
         System.out.println("Ola, me chamo " + nome + " " + sobrenome);
         System.out.println("Tenho " + idade + " anos ");
-        System.out.println("Minha altura é " + altura + "cm ");
+        System.out.printf("Minha altura é %.2f cm", altura);
 
     }
 }

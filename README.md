@@ -1724,6 +1724,8 @@ Exemplo:
 ```java
 public class AboutMe {
     public static void main(String[] args) {
+        
+        
         //os argumentos começam com indice 0
         String nome = args [0];
         String sobrenome = args [1];
@@ -1744,3 +1746,63 @@ public class AboutMe {
 4. Confirme com **Enter**
 
 ![](/home/mauricio/Imagens/Capturas de tela/Captura de tela de 2023-08-23 17-46-29.png)
+
+<br>
+
+### Aula 21
+#### Scanner
+
+Nos exemplos anteriores, percebemos que podemos receber, dados digitados pelo usuário do nosso sistema, porém, tudo
+precisa estar em uma linha e também é necessário informar os valores nas posições correspondentes. Esta abordagem pode
+deixar margens de execução, com erro do nosso programa. Para isso, com a finalidade de deixar as nossas entradas de
+dados mais seguras, agora vamos receber estes dados via Scanner.
+
+A classe Scanner, permite que o usuário tenha, uma interação mais assertiva com o nosso programa, veja como vamos mudar
+o nosso programa AboutMe para deixar mais intuitivo aos usuários:
+
+```java
+import java.util.Locale;
+import java.util.Scanner;
+
+public class AboutMe {
+    public static void main(String[] args) {
+        //criando o objeto scanner
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+        
+        System.out.println("Digite seu nome");
+        String nome = scanner.next();
+        
+        System.out.println("Digite seu sobrenome");
+        String sobrenome = scanner.next();
+
+        System.out.println("Digite sua idade");
+        int idade = scanner.nextInt();
+        
+        System.out.println("Digite sua altura");
+        double altura = scanner.nextDouble();
+
+        
+        //imprimindo os dados obtidos pelo usuario
+        System.out.println("Ola, me chamo " + nome + " " + sobrenome);
+        System.out.println("Tenho " + idade + " anos ");
+        System.out.println("Minha altura é " + altura + "cm ");
+        
+        
+    }
+}
+```
+#
+**Referencias:** 
+> https://sintaxe.netlify.app/topicos/linguagens/java/sobre
+ 
+> https://glysns.gitbook.io/java-basico/
+ 
+> Github do instrutor: https://github.com/glysns
+
+> Linkedin do instrutor: https://www.linkedin.com/in/glysns/
+
+> Meu Github: https://github.com/JMAURICIORLIMA
+
+> Meu Linkedin: https://www.linkedin.com/in/josemauricio-rodriguesdelima/
+
+***Bons estudos a todos.***
